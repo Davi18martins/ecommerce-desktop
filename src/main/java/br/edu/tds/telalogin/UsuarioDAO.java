@@ -16,14 +16,16 @@ public class UsuarioDAO {
     
     //Cadastra usuário
     public void cadastrar(Usuario usuario){
-        String sql = "INSERT into usuarios(nome, email, senha) VALUES (?,?,?)";
+        String sql = "INSERT into usuarios(nomeCompleto,nomeUsuario, email, senha, cpf) VALUES (?,?,?,?,?)";
         try(Connection conn = Conexao.conectar()){
             PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setString(1, usuario.getNome());
-            stmt.setString(2, usuario.getEmail());
-            stmt.setString(3, usuario.getSenha());
+            stmt.setString(1, usuario.getNomeCompleto());
+            stmt.setString(2, usuario.getNomeUsuario());
+            stmt.setString(3, usuario.getEmail());
+            stmt.setString(4, usuario.getSenha());
+            stmt.setString(5, usuario.getCpf());
             stmt.executeUpdate();
-            System.out.println("Usuário cadastrado com sucesso!");
+            System.out.println("Usuário " + usuario.getNomeCompleto() + " cadastrado com sucesso!");
         }
         catch(Exception e){
             System.out.println("Erro ao cadastrar: "+ e.getMessage());

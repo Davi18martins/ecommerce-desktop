@@ -125,6 +125,11 @@ public class TelaCadastroUsuarioController implements Initializable {
         System.out.println("Senha  : " + senha);
         System.out.println("Email  : " + email);
         System.out.println("CPF    : " + cpf);
+        
+        //Cadastrando um usuário
+        UsuarioDAO dao = new UsuarioDAO();
+        Usuario u = new Usuario (nome, usuario, email, senha, cpf);
+        dao.cadastrar(u);
     }
 }
     
