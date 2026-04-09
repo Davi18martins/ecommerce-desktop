@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -44,7 +45,7 @@
             <FontIcon iconColor="#277ce0" iconLiteral="fas-user-plus" iconSize="70" layoutX="156.0" layoutY="109.0" />
             <TextField fx:id="txtNome" layoutX="50.0" layoutY="153.0" prefHeight="26.0" prefWidth="300.0" promptText="Nome Completo" style="-fx-border-color: #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
             <TextField fx:id="txtUsuario" layoutX="50.0" layoutY="201.0" prefHeight="29.0" prefWidth="130.0" promptText="Nome de usuário" style="-fx-border-color: #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
-            <TextField fx:id="txtSenha" layoutX="220.0" layoutY="201.0" prefHeight="29.0" prefWidth="130.0" promptText="Senha" style="-fx-border-color: #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
+            <PasswordField fx:id="txtSenha" layoutX="220.0" layoutY="201.0" prefHeight="29.0" prefWidth="130.0" promptText="Senha" style="-fx-border-color: #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
             <TextField fx:id="txtEmail" layoutX="50.0" layoutY="246.0" prefHeight="26.0" prefWidth="300.0" promptText="Email" style="-fx-border-color: #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
             <TextField fx:id="txtCPF" layoutX="50.0" layoutY="293.0" prefHeight="26.0" prefWidth="300.0" promptText="CPF" style="-fx-border-color: #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
             <FontIcon iconColor="#277ce0" iconLiteral="fas-user-circle" iconSize="25" layoutX="26.0" layoutY="178.0" text="" />
