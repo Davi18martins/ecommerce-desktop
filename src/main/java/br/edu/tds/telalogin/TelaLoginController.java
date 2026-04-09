@@ -48,6 +48,21 @@ public class TelaLoginController {
         }
         lblUsuario.setText("");
         lblSenha.setText("");
+        
+        UsuarioDAO dao = new UsuarioDAO();
+        Boolean login = dao.login(usuario,senha);
+        
+        if(login){
+            //Login com sucesso.
+            txtUsuario.setStyle("-fx-border-color: green; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+            txtSenha.setStyle("-fx-border-color: green; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        }
+        else{
+            //Falha no login (usuário ou senha inválido)
+            lblUsuario.setText("Usuário/Senha incorreto(a)");
+            lblSenha.setText("Usuário/Senha incorreto(a)");
+        }
+        
         System.out.println("Usuário: " + usuario);
         System.out.println("Senha  : " + senha);
         
