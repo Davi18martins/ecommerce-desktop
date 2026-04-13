@@ -32,7 +32,7 @@
    <right>
       <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="txtUsuario" layoutX="94.0" layoutY="207.0" promptText="Nome de Usuário" style="-fx-border-color: #277CE0; -fx-border-width: 0px 0px 3px 0px; -fx-background-color: transparet;" />
+            <TextField fx:id="txtUsuario" layoutX="94.0" layoutY="207.0" promptText="Email" style="-fx-border-color: #277CE0; -fx-border-width: 0px 0px 3px 0px; -fx-background-color: transparet;" />
             <PasswordField fx:id="txtSenha" layoutX="94.0" layoutY="266.0" prefHeight="28.0" prefWidth="162.0" promptText="Senha do Usuário" style="-fx-border-color: #277CE0; -fx-border-width: 0px 0px 3px 0px; -fx-background-color: transparent;" />
             <Button layoutX="145.0" layoutY="330.0" mnemonicParsing="false" onAction="#realizarLogin" style="-fx-background-color: #277CE0; -fx-font-weight: 900;" text="Login" textFill="WHITE" />
             <Hyperlink layoutX="109.0" layoutY="385.0" text="Esqueceu senha ?" textFill="#277ce0">

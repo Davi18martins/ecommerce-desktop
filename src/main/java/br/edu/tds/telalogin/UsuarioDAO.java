@@ -13,11 +13,11 @@ import java.sql.ResultSet;
  * @author aluno
  */
 public class UsuarioDAO {
-    
+
     //Cadastra usuário
-    public void cadastrar(Usuario usuario){
+    public void cadastrar(Usuario usuario) {
         String sql = "INSERT into usuarios(nomeCompleto,nomeUsuario, email, senha, cpf) VALUES (?,?,?,?,?)";
-        try(Connection conn = Conexao.conectar()){
+        try (Connection conn = Conexao.conectar()) {
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, usuario.getNomeCompleto());
             stmt.setString(2, usuario.getNomeUsuario());
@@ -26,23 +26,22 @@ public class UsuarioDAO {
             stmt.setString(5, usuario.getCpf());
             stmt.executeUpdate();
             System.out.println("Usuário " + usuario.getNomeCompleto() + " cadastrado com sucesso!");
-        }
-        catch(Exception e){
-            System.out.println("Erro ao cadastrar: "+ e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Erro ao cadastrar: " + e.getMessage());
         }
     }
+
     //Testa login de usuário
-           public boolean login(String email, String senha) {
-       String sql = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
-       try (Connection conn = Conexao.conectar();
-           PreparedStatement stmt = conn.prepareStatement(sql)) {
-           stmt.setString(1, email);
-           stmt.setString(2, senha);
-           ResultSet rs = stmt.executeQuery();
-           return rs.next(); // se encontrou, login válido
-       } catch (Exception e) {
-           System.out.println("Erro no login: " + e.getMessage());
-           return false;
-       }
-   }
+    public boolean login(String email, String senha) {
+        String sql = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
+        try (Connection conn = Conexao.conectar(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, email);
+            stmt.setString(2, senha);
+            ResultSet rs = stmt.executeQuery();
+            return true; // se encontrou, login válido
+        } catch (Exception e) {
+            System.out.println("Erro no login: " + e.getMessage());
+            return false;
+        }
+    }
 }

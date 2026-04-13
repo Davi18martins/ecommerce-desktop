@@ -22,7 +22,7 @@ public class TelaLoginController {
         App.setRoot("telaCadastroUsuario");
     }
     @FXML
-    private void realizarLogin(){
+    private void realizarLogin() throws IOException{
         
         String usuario = txtUsuario.getText();
         String senha = txtSenha.getText();
@@ -56,6 +56,8 @@ public class TelaLoginController {
             //Login com sucesso.
             txtUsuario.setStyle("-fx-border-color: green; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
             txtSenha.setStyle("-fx-border-color: green; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+            System.out.println("Login feito com sucesso!!!!");
+            App.setRoot("TelaGerenciamentoUsuariosController");
         }
         else{
             //Falha no login (usuário ou senha inválido)
