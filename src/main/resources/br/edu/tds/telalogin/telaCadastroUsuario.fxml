@@ -11,49 +11,69 @@
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.telalogin.TelaCadastroUsuarioController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.telalogin.TelaCadastroUsuarioController">
    <left>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #277ce0;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="500.0" prefWidth="332.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="11.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seja Bem-Vindo ao Site!">
+            <Text fill="WHITE" layoutX="67.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seja Bem-Vindo ao Site!">
                <font>
                   <Font name="System Bold Italic" size="16.0" />
                </font>
             </Text>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagens/IMG_3009-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagens/supra-mk4-jdm-car-illlustration-free-vector-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../Imagens/motor-prints-30-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="194.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Imagens/supra-mk4-jdm-car-illlustration-free-vector-removebg-preview.png" />
+                  <Image url="@../../../../Imagens/7c204834956291.57c6b35608c81-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="194.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagens/il_fullxfull.5678454505_eltb-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="194.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Imagens/il_fullxfull.5678454505_eltb-removebg-previewNSX.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #277CE0;" BorderPane.alignment="CENTER">
          <children>
-            <Text fill="#277ce0" layoutX="44.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar conta de usuário">
+            <Text layoutX="30.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar conta de usuário">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Text>
-            <FontIcon iconColor="#277ce0" iconLiteral="fas-user-plus" iconSize="70" layoutX="156.0" layoutY="109.0" />
-            <TextField fx:id="txtNome" layoutX="50.0" layoutY="153.0" prefHeight="26.0" prefWidth="300.0" promptText="Nome Completo" style="-fx-border-color: #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
-            <TextField fx:id="txtUsuario" layoutX="50.0" layoutY="201.0" prefHeight="29.0" prefWidth="130.0" promptText="Nome de usuário" style="-fx-border-color: #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
-            <PasswordField fx:id="txtSenha" layoutX="220.0" layoutY="201.0" prefHeight="29.0" prefWidth="130.0" promptText="Senha" style="-fx-border-color: #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
-            <TextField fx:id="txtEmail" layoutX="50.0" layoutY="246.0" prefHeight="26.0" prefWidth="300.0" promptText="Email" style="-fx-border-color: #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
-            <TextField fx:id="txtCPF" layoutX="50.0" layoutY="293.0" prefHeight="26.0" prefWidth="300.0" promptText="CPF" style="-fx-border-color: #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
-            <FontIcon iconColor="#277ce0" iconLiteral="fas-user-circle" iconSize="25" layoutX="26.0" layoutY="178.0" text="" />
-            <FontIcon iconColor="#277ce0" iconLiteral="fas-user" iconSize="25" layoutX="27.0" layoutY="226.0" text="" />
-            <FontIcon iconColor="#277ce0" iconLiteral="fas-key" iconSize="25" layoutX="188.0" layoutY="224.0" />
-            <FontIcon iconColor="#277ce0" iconLiteral="fas-envelope" iconSize="25" layoutX="25.0" layoutY="269.0" text="" />
-            <FontIcon iconColor="#277ce0" iconLiteral="fas-id-card" iconSize="25" layoutX="24.0" layoutY="316.0" selectionEnd="0" text="" />
-            <Button layoutX="65.0" layoutY="352.0" mnemonicParsing="false" onAction="#cadastrarUsuario" prefWidth="100.0" style="-fx-background-color: #277ce0; -fx-font-weight: 900;" text="Cadastrar" textFill="WHITE" />
-            <Button layoutX="235.0" layoutY="352.0" mnemonicParsing="false" onAction="#abrirTelalogin" prefWidth="100.0" style="-fx-background-color: #277ce0; -fx-font-weight: 900;" text="Cancelar" textFill="WHITE" />
+            <FontIcon iconLiteral="fas-user-plus" iconSize="70" layoutX="142.0" layoutY="144.0" />
+            <TextField fx:id="txtNome" layoutX="36.0" layoutY="187.0" prefHeight="26.0" prefWidth="300.0" promptText="Nome Completo" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
+            <TextField fx:id="txtUsuario" layoutX="39.0" layoutY="227.0" prefHeight="29.0" prefWidth="130.0" promptText="Nome de usuário" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
+            <PasswordField fx:id="txtSenha" layoutX="206.0" layoutY="229.0" prefHeight="29.0" prefWidth="130.0" promptText="Senha" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
+            <TextField fx:id="txtEmail" layoutX="36.0" layoutY="290.0" prefHeight="26.0" prefWidth="300.0" promptText="Email" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
+            <TextField fx:id="txtCPF" layoutX="36.0" layoutY="362.0" prefHeight="26.0" prefWidth="300.0" promptText="CPF" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
+            <FontIcon iconLiteral="fas-user-circle" iconSize="25" layoutX="14.0" layoutY="211.0" text="" />
+            <FontIcon iconLiteral="fas-user" iconSize="25" layoutX="13.0" layoutY="253.0" text="" wrappingWidth="25.875" />
+            <FontIcon iconLiteral="fas-key" iconSize="25" layoutX="181.0" layoutY="252.0" text="" />
+            <FontIcon iconLiteral="fas-envelope" iconSize="25" layoutX="11.0" layoutY="314.0" text="" />
+            <FontIcon iconLiteral="fas-id-card" iconSize="25" layoutX="9.0" layoutY="386.0" selectionEnd="0" text="" />
+            <Button layoutX="26.0" layoutY="439.0" mnemonicParsing="false" onAction="#cadastrarUsuario" prefWidth="100.0" style="-fx-background-color: black; -fx-font-weight: 900;" text="Cadastrar" textFill="WHITE" />
+            <Button layoutX="238.0" layoutY="439.0" mnemonicParsing="false" onAction="#abrirTelalogin" prefWidth="100.0" style="-fx-background-color: black; -fx-font-weight: 900;" text="Cancelar" textFill="WHITE" />
          </children>
       </AnchorPane>
    </center>

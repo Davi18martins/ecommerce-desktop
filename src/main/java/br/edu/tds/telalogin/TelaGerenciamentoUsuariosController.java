@@ -4,9 +4,19 @@
  */
 package br.edu.tds.telalogin;
 
+import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
  * FXML Controller class
@@ -15,12 +25,62 @@ import javafx.fxml.Initializable;
  */
 public class TelaGerenciamentoUsuariosController implements Initializable {
 
+    @FXML
+    private TableView<Usuario> tabelaUsuarios;
+    
+    @FXML
+    private TableColumn<Usuario,String> colNomeCompleto;
+    
+    @FXML
+    private TableColumn<Usuario,String> colUsuario;
+    
+    @FXML
+    private TableColumn<Usuario,String> colEmail;
+    
+    @FXML
+    private TableColumn<Usuario,String> colCPF;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+        colNomeCompleto.setCellValueFactory(new PropertyValueFactory<>("nomeCompleto"));
+        colUsuario.setCellValueFactory(new PropertyValueFactory<>("nomeUsuario"));
+        colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colCPF.setCellValueFactory(new PropertyValueFactory<>("cpf"));
+        
+        carregarUsuarios();
+    }
+    @FXML
+    private void abrirTelaCadastroUsuario() throws IOException {
+        App.setRoot("telaCadastroUsuario");
+    }
+
+    private void carregarUsuarios() {
+    ObservableList<Usuario> listaUsuarios = FXCollections.observableArrayList();
+
+   String sql = "SELECT * FROM usuarios";
+   try (Connection conn = Conexao.conectar();
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        ResultSet rs = stmt.executeQuery()) {
+
+       while (rs.next()) {
+           Usuario u = new Usuario();
+
+           u.setNomeCompleto(rs.getString("nomeCompleto"));
+           u.setNomeUsuario(rs.getString("nomeUsuario"));
+           u.setEmail(rs.getString("email"));
+           u.setCpf(rs.getString("cpf"));
+
+           listaUsuarios.add(u);
+       }
+
+       tabelaUsuarios.setItems(listaUsuarios);
+
+   } catch (Exception e) {
+       e.printStackTrace();
+   }
+    }
 }

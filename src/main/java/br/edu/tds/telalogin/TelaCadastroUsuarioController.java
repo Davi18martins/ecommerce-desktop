@@ -82,11 +82,6 @@ public class TelaCadastroUsuarioController implements Initializable {
         if(cpf.isEmpty()){
             txtCPF.setStyle("-fx-border-color: red; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
         }
-        lblNome.setText("");
-        lblUsuario.setText("");
-        lblSenha.setText("");
-        lblEmail.setText("");
-        lblCPF.setText("");
         System.out.println("Nome   : " + nome);
         System.out.println("Usuário: " + usuario);
         System.out.println("Senha  : " + senha);

@@ -25,6 +25,10 @@ public class Usuario {
         this.cpf = cpf;
     }
 
+    Usuario() {
+        
+    }
+
     public int getId() {
         return id;
     }

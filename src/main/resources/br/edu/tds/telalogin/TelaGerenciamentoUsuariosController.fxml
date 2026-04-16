@@ -19,7 +19,7 @@
    <bottom>
       <HBox alignment="CENTER" prefHeight="56.0" prefWidth="700.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" style="-fx-background-color: #277CE0;" text="+ Novo" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#abrirTelaCadastroUsuario" style="-fx-background-color: #277CE0;" text="+ Novo" textFill="WHITE" />
             <Button mnemonicParsing="false" style="-fx-background-color: #f26900;" text="| Editar" textFill="WHITE" />
             <Button mnemonicParsing="false" style="-fx-background-color: red;" text="x Excluir" textFill="WHITE" />
          </children>
@@ -29,12 +29,12 @@
       </HBox>
    </bottom>
    <center>
-      <TableView prefHeight="437.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tabelaUsuarios" prefHeight="437.0" prefWidth="700.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="194.0" text=" Nome Completo" />
-          <TableColumn minWidth="7.0" prefWidth="144.0" text="Usuário" />
-            <TableColumn prefWidth="173.0" text="Email" />
-            <TableColumn prefWidth="188.0" text="CPF" />
+            <TableColumn fx:id="colNomeCompleto" prefWidth="187.0" text="Nome Completo" />
+          <TableColumn fx:id="colUsuario" minWidth="7.0" prefWidth="173.0" text="Usuário" />
+            <TableColumn fx:id="colEmail" prefWidth="150.0" text="Email" />
+            <TableColumn fx:id="colCPF" prefWidth="189.0" text="CPF" />
         </columns>
       </TableView>
    </center>
