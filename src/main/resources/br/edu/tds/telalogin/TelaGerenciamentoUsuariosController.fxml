@@ -21,7 +21,7 @@
          <children>
             <Button mnemonicParsing="false" onAction="#abrirTelaCadastroUsuario" style="-fx-background-color: #277CE0;" text="+ Novo" textFill="WHITE" />
             <Button mnemonicParsing="false" style="-fx-background-color: #f26900;" text="| Editar" textFill="WHITE" />
-            <Button mnemonicParsing="false" style="-fx-background-color: red;" text="x Excluir" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#excluirUsuario" style="-fx-background-color: red;" text="x Excluir" textFill="WHITE" />
          </children>
          <BorderPane.margin>
             <Insets />

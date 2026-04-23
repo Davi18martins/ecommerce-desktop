@@ -14,6 +14,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -79,8 +80,47 @@ public class TelaGerenciamentoUsuariosController implements Initializable {
 
        tabelaUsuarios.setItems(listaUsuarios);
 
-   } catch (Exception e) {
-       e.printStackTrace();
+   } 
+   
+   
+   catch (Exception e) {
    }
+   }
+    
+   @FXML
+   private void excluirUsuario() throws Exception{
+    
+    Usuario uSelecionado = tabelaUsuarios.getSelectionModel().getSelectedItem();
+    
+    if(uSelecionado == null){
+        mostrarAlerta("Selecione um usuário");
+        return;
     }
+    
+    
+    System.out.println("Usuário: " +uSelecionado.getNomeUsuario());
+    
+    String sql = "DELETE FROM usuarios WHERE nomeUsuario = ?";
+    
+      try (Connection conn = Conexao.conectar();
+        PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+       stmt.setString(1, uSelecionado.getNomeUsuario());
+       stmt.executeUpdate();
+
+       carregarUsuarios();
+
+}
+      catch (Exception e) {
+   }
+   }
+ 
+   private void mostrarAlerta(String msg){
+   Alert alert = new Alert(Alert.AlertType.INFORMATION);
+   alert.setTitle("Sistemas");
+   alert.setHeaderText(null);
+   alert.setContentText(msg);
+   alert.showAndWait();
+   }
+    
 }

@@ -62,11 +62,11 @@
                </font>
             </Text>
             <FontIcon iconLiteral="fas-user-plus" iconSize="70" layoutX="142.0" layoutY="144.0" />
-            <TextField fx:id="txtNome" layoutX="36.0" layoutY="187.0" prefHeight="26.0" prefWidth="300.0" promptText="Nome Completo" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
+            <TextField fx:id="txtNome" layoutX="36.0" layoutY="187.0" prefHeight="20.0" prefWidth="300.0" promptText="Nome Completo" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
             <TextField fx:id="txtUsuario" layoutX="39.0" layoutY="227.0" prefHeight="29.0" prefWidth="130.0" promptText="Nome de usuário" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
             <PasswordField fx:id="txtSenha" layoutX="206.0" layoutY="229.0" prefHeight="29.0" prefWidth="130.0" promptText="Senha" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
-            <TextField fx:id="txtEmail" layoutX="36.0" layoutY="290.0" prefHeight="26.0" prefWidth="300.0" promptText="Email" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
-            <TextField fx:id="txtCPF" layoutX="36.0" layoutY="362.0" prefHeight="26.0" prefWidth="300.0" promptText="CPF" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
+            <TextField fx:id="txtEmail" layoutX="36.0" layoutY="290.0" prefHeight="20.0" prefWidth="300.0" promptText="Email" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
+            <TextField fx:id="txtCPF" layoutX="36.0" layoutY="362.0" prefHeight="20.0" prefWidth="300.0" promptText="CPF" style="-fx-border-color: black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;" />
             <FontIcon iconLiteral="fas-user-circle" iconSize="25" layoutX="14.0" layoutY="211.0" text="" />
             <FontIcon iconLiteral="fas-user" iconSize="25" layoutX="13.0" layoutY="253.0" text="" wrappingWidth="25.875" />
             <FontIcon iconLiteral="fas-key" iconSize="25" layoutX="181.0" layoutY="252.0" text="" />
