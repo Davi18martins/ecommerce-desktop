@@ -13,11 +13,15 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -74,6 +78,7 @@ public class TelaGerenciamentoUsuariosController implements Initializable {
            u.setNomeUsuario(rs.getString("nomeUsuario"));
            u.setEmail(rs.getString("email"));
            u.setCpf(rs.getString("cpf"));
+           u.setSenha(rs.getString("senha"));
 
            listaUsuarios.add(u);
        }
@@ -97,7 +102,6 @@ public class TelaGerenciamentoUsuariosController implements Initializable {
         return;
     }
     
-    
     System.out.println("Usuário: " +uSelecionado.getNomeUsuario());
     
     String sql = "DELETE FROM usuarios WHERE nomeUsuario = ?";
@@ -112,8 +116,8 @@ public class TelaGerenciamentoUsuariosController implements Initializable {
 
 }
       catch (Exception e) {
-   }
-   }
+      e.printStackTrace();
+      } }
  
    private void mostrarAlerta(String msg){
    Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -122,5 +126,39 @@ public class TelaGerenciamentoUsuariosController implements Initializable {
    alert.setContentText(msg);
    alert.showAndWait();
    }
+   
+    @FXML
+    private void editarUsuario() throws Exception{
     
+    Usuario uSelecionado = tabelaUsuarios.getSelectionModel().getSelectedItem();
+    
+    if(uSelecionado == null){
+        mostrarAlerta("Selecione um usuário");
+        return;
+    }
+    try{
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/telaCadastroUsuario.fxml"));
+        
+        Parent root =loader.load();
+        
+        TelaCadastroUsuarioController controller =loader.getController();
+        
+        //Envia os dados da tela Gerenciamento de Usuarios
+        //para o controlador de Cadastro de Usuarios
+        controller.setUsuario(uSelecionado);
+        
+        //Trocando de tela
+        Stage stage = (Stage) tabelaUsuarios.getScene().getWindow();
+        stage.setScene(new Scene(root));
+
+        
+    }
+    catch(Exception e){
+        e.printStackTrace();
+    }
+   
+   
+    }
 }
+

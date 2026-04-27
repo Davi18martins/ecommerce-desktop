@@ -9,9 +9,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -48,6 +50,12 @@ public class TelaCadastroUsuarioController implements Initializable {
     private Label lblEmail;
     @FXML
     private Label lblCPF;
+    @FXML
+    private Text txtTelaEditarUsuario;
+    @FXML
+    private Button btnCadastrar;
+    
+    private Usuario usuarioEdicao;
     
     @FXML
     private void abrirTelalogin() throws IOException {
@@ -55,6 +63,17 @@ public class TelaCadastroUsuarioController implements Initializable {
     }
     @FXML
     private void cadastrarUsuario(){ 
+        
+        if(usuarioEdicao == null){
+            inserirUsuario();
+        }
+        else{
+            atualizarUsuario();
+        }
+        
+    }
+    private void inserirUsuario(){ 
+        
         txtNome.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
         txtUsuario.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
         txtSenha.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
@@ -93,5 +112,62 @@ public class TelaCadastroUsuarioController implements Initializable {
         Usuario u = new Usuario (nome, usuario, email, senha, cpf);
         dao.cadastrar(u);
     }
+    
+    private void atualizarUsuario(){ 
+        
+        txtNome.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtUsuario.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtSenha.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtEmail.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtCPF.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        
+        String nome = txtNome.getText();
+        String usuario = txtUsuario.getText();
+        String senha = txtSenha.getText();
+        String email = txtEmail.getText();
+        String cpf = txtCPF.getText();
+        
+        if(nome.isEmpty()){
+            txtNome.setStyle("-fx-border-color: red; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        }
+        if(usuario.isEmpty()){
+            txtUsuario.setStyle("-fx-border-color: red; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        }
+        if(senha.isEmpty()){
+            txtSenha.setStyle("-fx-border-color: red; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        }
+        if(email.isEmpty()){
+            txtEmail.setStyle("-fx-border-color: red; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        }
+        if(cpf.isEmpty()){
+            txtCPF.setStyle("-fx-border-color: red; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        }
+        System.out.println("Nome   : " + nome);
+        System.out.println("Usuário: " + usuario);
+        System.out.println("Senha  : " + senha);
+        System.out.println("Email  : " + email);
+        System.out.println("CPF    : " + cpf);
+        
+        //Atualizando um usuário
+        UsuarioDAO dao = new UsuarioDAO();
+        Usuario u = new Usuario (nome, usuario, email, senha, cpf);
+        dao.atualizar(u);
+    }
+    
+    public void setUsuario(Usuario u){
+        
+        usuarioEdicao = u;
+        //Estou colocando
+        //
+        txtNome.setText(u.getNomeCompleto());
+        txtUsuario.setText(u.getNomeUsuario());
+        txtSenha.setText(u.getSenha());
+        txtEmail.setText(u.getEmail());
+        txtCPF.setText(u.getCpf());
+        
+        txtTelaEditarUsuario.setText("Atualizar conta de usuário");
+        btnCadastrar.setText("Atualizar");
+    }
+    
 }
     

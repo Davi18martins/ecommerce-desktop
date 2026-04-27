@@ -20,7 +20,7 @@
       <HBox alignment="CENTER" prefHeight="56.0" prefWidth="700.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" onAction="#abrirTelaCadastroUsuario" style="-fx-background-color: #277CE0;" text="+ Novo" textFill="WHITE" />
-            <Button mnemonicParsing="false" style="-fx-background-color: #f26900;" text="| Editar" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#editarUsuario" style="-fx-background-color: #f26900;" text="| Editar" textFill="WHITE" />
             <Button mnemonicParsing="false" onAction="#excluirUsuario" style="-fx-background-color: red;" text="x Excluir" textFill="WHITE" />
          </children>
          <BorderPane.margin>
