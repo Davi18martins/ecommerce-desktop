@@ -196,8 +196,6 @@ public class TelaCadastroUsuarioController implements Initializable {
     public void setUsuario(Usuario u){
         
         usuarioEdicao = u;
-        //Estou colocando
-        //
         txtNome.setText(u.getNomeCompleto());
         txtUsuario.setText(u.getNomeUsuario());
         txtSenha.setText(u.getSenha());
