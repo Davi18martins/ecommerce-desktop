@@ -2,9 +2,13 @@ package br.edu.tds.telalogin;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class TelaLoginController {
     
@@ -19,7 +23,18 @@ public class TelaLoginController {
 
     @FXML
     private void abrirTelaCadastroUsuario() throws IOException {
-        App.setRoot("telaCadastroUsuario");
+        
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/telaCadastroUsuario.fxml"));
+        
+            Parent root =loader.load();
+        
+            TelaCadastroUsuarioController controller =loader.getController();
+        
+       
+        
+            //Trocando de tela
+            Stage stage = (Stage) txtUsuario.getScene().getWindow();
+            stage.setScene(new Scene(root));
     }
     @FXML
     private void realizarLogin() throws IOException{
@@ -57,7 +72,18 @@ public class TelaLoginController {
             txtUsuario.setStyle("-fx-border-color: green; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
             txtSenha.setStyle("-fx-border-color: green; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
             System.out.println("Login feito com sucesso!!!!");
-            App.setRoot("TelaGerenciamentoUsuariosController");
+            
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/TelaGerenciamentoUsuariosController.fxml"));
+        
+            Parent root =loader.load();
+        
+            TelaGerenciamentoUsuariosController controller =loader.getController();
+        
+       
+        
+            //Trocando de tela
+            Stage stage = (Stage) txtUsuario.getScene().getWindow();
+            stage.setScene(new Scene(root));
         }
         else{
             //Falha no login (usuário ou senha inválido)

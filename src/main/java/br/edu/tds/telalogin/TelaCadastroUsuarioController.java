@@ -8,12 +8,17 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -59,10 +64,20 @@ public class TelaCadastroUsuarioController implements Initializable {
     
     @FXML
     private void abrirTelalogin() throws IOException {
-        App.setRoot("telaLogin");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/telaLogin.fxml"));
+        
+        Parent root =loader.load();
+        
+        TelaLoginController controller =loader.getController();
+        
+       
+        
+        //Trocando de tela
+        Stage stage = (Stage) txtNome.getScene().getWindow();
+        stage.setScene(new Scene(root));
     }
     @FXML
-    private void cadastrarUsuario(){ 
+    private void cadastrarUsuario() throws IOException{ 
         
         if(usuarioEdicao == null){
             inserirUsuario();
@@ -72,7 +87,7 @@ public class TelaCadastroUsuarioController implements Initializable {
         }
         
     }
-    private void inserirUsuario(){ 
+    private void inserirUsuario() throws IOException{ 
         
         txtNome.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
         txtUsuario.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
@@ -111,9 +126,21 @@ public class TelaCadastroUsuarioController implements Initializable {
         UsuarioDAO dao = new UsuarioDAO();
         Usuario u = new Usuario (nome, usuario, email, senha, cpf);
         dao.cadastrar(u);
+        mostrarAlerta("O cadastro de " + u.getNomeCompleto()+ "foi cadastrado com sucesso!");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/TelaGerenciamentoUsuariosController.fxml"));
+        
+            Parent root =loader.load();
+        
+            TelaGerenciamentoUsuariosController controller =loader.getController();
+        
+       
+        
+            //Trocando de tela
+            Stage stage = (Stage) txtUsuario.getScene().getWindow();
+            stage.setScene(new Scene(root));
     }
     
-    private void atualizarUsuario(){ 
+    private void atualizarUsuario() throws IOException{ 
         
         txtNome.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
         txtUsuario.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
@@ -152,6 +179,18 @@ public class TelaCadastroUsuarioController implements Initializable {
         UsuarioDAO dao = new UsuarioDAO();
         Usuario u = new Usuario (nome, usuario, email, senha, cpf);
         dao.atualizar(u);
+        mostrarAlerta("O cadastro de " + u.getNomeCompleto()+ "foi atualizado com sucesso!");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/TelaGerenciamentoUsuariosController.fxml"));
+        
+            Parent root =loader.load();
+        
+            TelaGerenciamentoUsuariosController controller =loader.getController();
+        
+       
+        
+            //Trocando de tela
+            Stage stage = (Stage) txtUsuario.getScene().getWindow();
+            stage.setScene(new Scene(root));;
     }
     
     public void setUsuario(Usuario u){
@@ -168,6 +207,14 @@ public class TelaCadastroUsuarioController implements Initializable {
         txtTelaEditarUsuario.setText("Atualizar conta de usuário");
         btnCadastrar.setText("Atualizar");
     }
+    
+    private void mostrarAlerta(String msg){
+    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+    alert.setTitle("Sistemas");
+    alert.setHeaderText(null);
+    alert.setContentText(msg);
+    alert.showAndWait();
+   }
     
 }
     
