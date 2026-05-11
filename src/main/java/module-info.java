@@ -1,4 +1,4 @@
-module br.edu.tds.telalogin {
+module br.edu.tds.ecommerce {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.base;
