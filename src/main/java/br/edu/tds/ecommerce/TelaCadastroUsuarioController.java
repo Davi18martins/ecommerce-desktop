@@ -64,7 +64,7 @@ public class TelaCadastroUsuarioController implements Initializable {
     
     @FXML
     private void abrirTelalogin() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/telaLogin.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaLogin.fxml"));
         
         Parent root =loader.load();
         
@@ -126,8 +126,8 @@ public class TelaCadastroUsuarioController implements Initializable {
         UsuarioDAO dao = new UsuarioDAO();
         Usuario u = new Usuario (nome, usuario, email, senha, cpf);
         dao.cadastrar(u);
-        mostrarAlerta("O cadastro de " + u.getNomeCompleto()+ "foi cadastrado com sucesso!");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/TelaGerenciamentoUsuariosController.fxml"));
+        mostrarAlerta("O cadastro de " + u.getNomeCompleto()+ " foi cadastrado com sucesso!");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaGerenciamentoUsuariosController.fxml"));
         
             Parent root =loader.load();
         
@@ -179,8 +179,8 @@ public class TelaCadastroUsuarioController implements Initializable {
         UsuarioDAO dao = new UsuarioDAO();
         Usuario u = new Usuario (nome, usuario, email, senha, cpf);
         dao.atualizar(u);
-        mostrarAlerta("O cadastro de " + u.getNomeCompleto()+ "foi atualizado com sucesso!");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/TelaGerenciamentoUsuariosController.fxml"));
+        mostrarAlerta("O cadastro de " + u.getNomeCompleto()+ " foi atualizado com sucesso!");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaGerenciamentoUsuariosController.fxml"));
         
             Parent root =loader.load();
         

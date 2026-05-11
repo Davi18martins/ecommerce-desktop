@@ -61,7 +61,7 @@ public class TelaGerenciamentoUsuariosController implements Initializable {
     @FXML
     private void abrirTelaCadastroUsuario() throws IOException {
         
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/telaCadastroUsuario.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaCadastroUsuario.fxml"));
         
         Parent root =loader.load();
         
@@ -149,7 +149,7 @@ public class TelaGerenciamentoUsuariosController implements Initializable {
     }
     try{
         
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/telaCadastroUsuario.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaCadastroUsuario.fxml"));
         
         Parent root =loader.load();
         

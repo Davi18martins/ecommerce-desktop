@@ -24,7 +24,7 @@ public class TelaLoginController {
     @FXML
     private void abrirTelaCadastroUsuario() throws IOException {
         
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/telaCadastroUsuario.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaCadastroUsuario.fxml"));
         
             Parent root =loader.load();
         
@@ -73,7 +73,7 @@ public class TelaLoginController {
             txtSenha.setStyle("-fx-border-color: green; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
             System.out.println("Login feito com sucesso!!!!");
             
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/telalogin/TelaGerenciamentoUsuariosController.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaGerenciamentoUsuariosController.fxml"));
         
             Parent root =loader.load();
         
