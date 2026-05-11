@@ -4,6 +4,6 @@ module br.edu.tds.telalogin {
     requires java.base;
     requires java.sql;
 
-    opens br.edu.tds.telalogin to javafx.fxml;
-    exports br.edu.tds.telalogin;
+    opens br.edu.tds.ecommerce to javafx.fxml;
+    exports br.edu.tds.ecommerce;
 }

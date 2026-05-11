@@ -1,4 +1,4 @@
-package br.edu.tds.telalogin;
+package br.edu.tds.ecommerce;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
