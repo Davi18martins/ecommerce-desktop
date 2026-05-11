@@ -54,7 +54,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.4</version>
                 <configuration>
-                    <mainClass>br.edu.tds.telalogin.App</mainClass>
+                    <mainClass>br.edu.tds.ecommerce.App</mainClass>
                 </configuration>
                 <executions>
                     <execution>
