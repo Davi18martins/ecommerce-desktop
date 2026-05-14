@@ -62,8 +62,8 @@
             <TextField fx:id="txtImagem" layoutX="44.0" layoutY="275.0" prefHeight="29.0" prefWidth="280.0" promptText="URL da Imagem" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 3 0;" />
             <FontIcon iconLiteral="fas-image" iconSize="25" layoutX="14.0" layoutY="300.0" text="" />
             <TextArea layoutX="84.0" layoutY="316.0" prefHeight="140.0" prefWidth="200.0" />
-            <Button layoutX="43.0" layoutY="464.0" mnemonicParsing="false" onAction="#salvarProduto" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold;" text="Cadastrar" />
-            <Button fx:id="voltar" layoutX="243.0" layoutY="464.0" mnemonicParsing="false" onAction="#salvarProduto" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold;" text="Cancelar" />
+            <Button layoutX="43.0" layoutY="464.0" mnemonicParsing="false" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold;" text="Cadastrar" />
+            <Button fx:id="voltar" layoutX="243.0" layoutY="464.0" mnemonicParsing="false"  style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold;" text="Cancelar" />
          </children>
       </AnchorPane>
    </center>
