@@ -96,6 +96,4 @@ public class Produto {
         this.ativo = ativo;
     }
    
-   
-
 }
