@@ -39,6 +39,7 @@ public class TelaCadastroProdutosController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        cbCategoria.getItems().add("Informática");
     }    
     
 }
