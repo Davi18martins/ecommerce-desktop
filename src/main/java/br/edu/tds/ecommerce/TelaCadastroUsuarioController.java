@@ -89,11 +89,11 @@ public class TelaCadastroUsuarioController implements Initializable {
     }
     private void inserirUsuario() throws IOException{ 
         
-        txtNome.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
-        txtUsuario.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
-        txtSenha.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
-        txtEmail.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
-        txtCPF.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtNome.setStyle("-fx-border-color:  black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtUsuario.setStyle("-fx-border-color:  black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtSenha.setStyle("-fx-border-color:  black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtEmail.setStyle("-fx-border-color:  black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtCPF.setStyle("-fx-border-color:  black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
         
         String nome = txtNome.getText();
         String usuario = txtUsuario.getText();
@@ -142,11 +142,11 @@ public class TelaCadastroUsuarioController implements Initializable {
     
     private void atualizarUsuario() throws IOException{ 
         
-        txtNome.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
-        txtUsuario.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
-        txtSenha.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
-        txtEmail.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
-        txtCPF.setStyle("-fx-border-color:  #277CE0; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtNome.setStyle("-fx-border-color:  black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtUsuario.setStyle("-fx-border-color:  black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtSenha.setStyle("-fx-border-color:  black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtEmail.setStyle("-fx-border-color:  black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
+        txtCPF.setStyle("-fx-border-color:  black; -fx-border-width: 0px0px3px0px; -fx-background-color: transparet;");
         
         String nome = txtNome.getText();
         String usuario = txtUsuario.getText();
