@@ -35,6 +35,8 @@ public class TelaCadastroProdutosController implements Initializable {
     private ComboBox<String> cbCategoria;
     @FXML
     private CheckBox cAtivo;
+    @FXML
+    private Produto produtoEdicao;
     
     
     /**
@@ -114,4 +116,15 @@ public class TelaCadastroProdutosController implements Initializable {
     alert.showAndWait();
     }
     
+    public void setProduto(Produto p){
+        
+        produtoEdicao = p;
+        txtNome.setText(produtoEdicao.getNome());
+        cbCategoria.setValue(produtoEdicao.getCategoria());
+        txtPreco.setText(String.valueOf(produtoEdicao.getPreco()));
+        txtQuantidade.setText(String.valueOf(produtoEdicao.getQuantidade()));
+        txtImagem.setText(produtoEdicao.getImagem());
+        txtDescricao.setText(produtoEdicao.getDescricao());
+        cAtivo.setSelected(produtoEdicao.isAtivo());
+    }
 }

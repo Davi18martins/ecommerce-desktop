@@ -12,12 +12,12 @@
    <top>
       <HBox alignment="CENTER" prefHeight="48.0" prefWidth="700.0" style="-fx-background-color: #277CE0;" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="47.0" prefWidth="700.0" style="-fx-background-color: #277CE0; -fx-font-size: 20; -fx-font-weight: 800;" text="Gerenciamento de Usuários" textFill="WHITE" />
+            <Label alignment="CENTER" prefHeight="47.0" prefWidth="700.0" style="-fx-background-color: black; -fx-font-size: 20; -fx-font-weight: 800;" text="Gerenciamento de Usuários" textFill="WHITE" />
          </children>
       </HBox>
    </top>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="56.0" prefWidth="700.0" spacing="20.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="56.0" prefWidth="700.0" spacing="20.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" onAction="#abrirTelaCadastroUsuario" style="-fx-background-color: #277CE0;" text="+ Novo" textFill="WHITE" />
             <Button mnemonicParsing="false" onAction="#editarUsuario" style="-fx-background-color: #f26900;" text="| Editar" textFill="WHITE" />
@@ -29,7 +29,7 @@
       </HBox>
    </bottom>
    <center>
-      <TableView fx:id="tabelaUsuarios" prefHeight="437.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tabelaUsuarios" prefHeight="396.0" prefWidth="805.0" style="-fx-background-color: #277CE0;" BorderPane.alignment="CENTER">
         <columns>
             <TableColumn fx:id="colNomeCompleto" prefWidth="187.0" text="Nome Completo" />
           <TableColumn fx:id="colUsuario" minWidth="7.0" prefWidth="173.0" text="Usuário" />
