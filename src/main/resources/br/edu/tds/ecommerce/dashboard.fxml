@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+
+<BorderPane style="-fx-background-color: #277CE0;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #277CE0;">
+         <children>
+            <VBox prefWidth="220.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="140.0" spacing="10.0">
+                     <children>
+                        <FontIcon iconColor="white" iconLiteral="fas-store" iconSize="40" />
+                        <Label text="Dashboard" textFill="white">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  
+                                          <VBox spacing="5.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="btnUsuarios" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleUsuarios" style="-fx-background-color: transparent;" text="  Usuários" textFill="white">
+                           <graphic>
+                              <FontIcon iconColor="white" iconLiteral="fas-users" iconSize="16" />
+                           </graphic>
+                           <font> <Font size="14.0" /> </font>
+                           <padding> <Insets bottom="12.0" left="25.0" top="12.0" /> </padding>
+                        </Button>
+                        <Button fx:id="btnProdutos" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleProdutos" style="-fx-background-color: transparent;" text="   Carros" textFill="white">
+                           <graphic>
+                              <FontIcon iconColor="white" iconLiteral="fas-box" iconSize="16" />
+                           </graphic>
+                           <font> <Font size="14.0" /> </font>
+                           <padding> <Insets bottom="12.0" left="25.0" top="12.0" /> </padding>
+                        </Button>
+                        <Button fx:id="btnFornecedores" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleFornecedores" style="-fx-background-color: transparent;" text="  Fornecedores" textFill="white">
+                           <graphic>
+                              <FontIcon iconColor="white" iconLiteral="fas-truck" iconSize="16" />
+                           </graphic>
+                           <font> <Font size="14.0" /> </font>
+                           <padding> <Insets bottom="12.0" left="25.0" top="12.0" /> </padding>
+                        </Button>
+                        <Button fx:id="btnVendas" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleVendas" style="-fx-background-color: transparent;" text="  Vendas" textFill="white">
+                           <graphic>
+                              <FontIcon iconColor="white" iconLiteral="fas-shopping-cart" iconSize="16" />
+                           </graphic>
+                           <font> <Font size="14.0" /> </font>
+                           <padding> <Insets bottom="12.0" left="25.0" top="12.0" /> </padding>
+                        </Button>
+                        <Button fx:id="btnFinanceiro" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleFinanceiro" style="-fx-background-color: transparent;" text="  Financeiro" textFill="white">
+                           <graphic>
+                              <FontIcon iconColor="white" iconLiteral="fas-dollar-sign" iconSize="16" />
+                           </graphic>
+                           <font> <Font size="14.0" /> </font>
+                           <padding> <Insets bottom="12.0" left="25.0" top="12.0" /> </padding>
+                        </Button>
+                        <Button fx:id="btnRelatorios" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleRelatorios" style="-fx-background-color: transparent;" text="  Relatórios" textFill="white">
+                           <graphic>
+                              <FontIcon iconColor="white" iconLiteral="fas-chart-bar" iconSize="16" />
+                           </graphic>
+                           <font> <Font size="14.0" /> </font>
+                           <padding> <Insets bottom="12.0" left="25.0" top="12.0" /> </padding>
+                        </Button>
+                     </children>
+                  </VBox>
+                  
+                                          <VBox alignment="BOTTOM_CENTER" prefHeight="80.0">
+                     <children>
+                        <Button fx:id="btnLogout" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleLogout" style="-fx-background-color: #d93838; -fx-background-radius: 8;" text="  Logout" textFill="white">
+                           <graphic>
+                              <FontIcon iconColor="white" iconLiteral="fas-sign-out-alt" iconSize="14" />
+                           </graphic>
+                           <font> <Font name="System Bold" size="14.0" /> </font>
+                           <VBox.margin> <Insets bottom="20.0" left="20.0" right="20.0" /> </VBox.margin>
+                           <padding> <Insets bottom="10.0" top="10.0" /> </padding>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            
+                              <GridPane hgap="25.0" style="-fx-background-color: #277CE0;" vgap="25.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="40.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  
+                                    <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 12, 0, 0, 4);">
+                     <children>
+                        <FontIcon fx:id="iconCardUsuarios" iconColor="#277ce0" iconLiteral="fas-users" iconSize="32" />
+                        <Label text="Usuários" textFill="#277ce0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Gerencie usuários do sistema" textFill="#888888">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  
+                                    <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 12, 0, 0, 4);" GridPane.columnIndex="1">
+                     <children>
+                        <FontIcon fx:id="iconCardProdutos" iconColor="#277ce0" iconLiteral="fas-car" iconSize="32" />
+                        <Label text="Carros" textFill="#277ce0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Controle de estoque e catálogo" textFill="#888888">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  
+                                    <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 12, 0, 0, 4);" GridPane.columnIndex="2">
+                     <children>
+                        <FontIcon fx:id="iconCardFornecedores" iconColor="#277ce0" iconLiteral="fas-truck" iconSize="32" />
+                        <Label text="Fornecedores" textFill="#277ce0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Controle de fornecedores" textFill="#888888">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  
+                                    <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 12, 0, 0, 4);" GridPane.rowIndex="1">
+                     <children>
+                        <FontIcon fx:id="iconCardVendas" iconColor="#277ce0" iconLiteral="fas-shopping-cart" iconSize="32" />
+                        <Label text="Vendas" textFill="#277ce0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Gerenciamento de vendas" textFill="#888888">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  
+                                    <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 12, 0, 0, 4);" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <FontIcon fx:id="iconCardFinanceiro" iconColor="#277ce0" iconLiteral="fas-dollar-sign" iconSize="32" />
+                        <Label text="Financeiro" textFill="#277ce0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Controle financeiro geral" textFill="#888888">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  
+                                    <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 12, 0, 0, 4);" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <FontIcon fx:id="iconCardRelatorios" iconColor="#277ce0" iconLiteral="fas-chart-bar" iconSize="32" />
+                        <Label text="Relatórios" textFill="#277ce0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Estatísticas e relatórios" textFill="#888888">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  
+                                 </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
