@@ -105,15 +105,15 @@
                   
                                     <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 12, 0, 0, 4);">
                      <children>
-                        <FontIcon fx:id="iconCardUsuarios" iconColor="#277ce0" iconLiteral="fas-users" iconSize="32" />
+                        <FontIcon fx:id="iconCardUsuarios" iconColor="#277ce0" iconLiteral="fas-users" iconSize="60" />
                         <Label text="Usuários" textFill="#277ce0">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="36.0" />
                            </font>
                         </Label>
                         <Label text="Gerencie usuários do sistema" textFill="#888888">
                            <font>
-                              <Font size="36.0" />
+                              <Font size="24.0" />
                            </font>
                         </Label>
                      </children>
@@ -121,15 +121,15 @@
                   
                                     <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 12, 0, 0, 4);" GridPane.columnIndex="1">
                      <children>
-                        <FontIcon fx:id="iconCardProdutos" iconColor="#277ce0" iconLiteral="fas-car" iconSize="32" />
+                        <FontIcon fx:id="iconCardProdutos" iconColor="#277ce0" iconLiteral="fas-car" iconSize="60" />
                         <Label text="Carros" textFill="#277ce0">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="36.0" />
                            </font>
                         </Label>
                         <Label text="Controle de estoque e catálogo" textFill="#888888">
                            <font>
-                              <Font size="11.0" />
+                              <Font size="24.0" />
                            </font>
                         </Label>
                      </children>
@@ -137,15 +137,15 @@
                   
                                     <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 12, 0, 0, 4);" GridPane.columnIndex="2">
                      <children>
-                        <FontIcon fx:id="iconCardFornecedores" iconColor="#277ce0" iconLiteral="fas-truck" iconSize="32" />
+                        <FontIcon fx:id="iconCardFornecedores" iconColor="#277ce0" iconLiteral="fas-truck" iconSize="60" />
                         <Label text="Fornecedores" textFill="#277ce0">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="36.0" />
                            </font>
                         </Label>
                         <Label text="Controle de fornecedores" textFill="#888888">
                            <font>
-                              <Font size="11.0" />
+                              <Font size="24.0" />
                            </font>
                         </Label>
                      </children>
@@ -153,15 +153,15 @@
                   
                                     <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 12, 0, 0, 4);" GridPane.rowIndex="1">
                      <children>
-                        <FontIcon fx:id="iconCardVendas" iconColor="#277ce0" iconLiteral="fas-shopping-cart" iconSize="32" />
+                        <FontIcon fx:id="iconCardVendas" iconColor="#277ce0" iconLiteral="fas-shopping-cart" iconSize="60" />
                         <Label text="Vendas" textFill="#277ce0">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="36.0" />
                            </font>
                         </Label>
                         <Label text="Gerenciamento de vendas" textFill="#888888">
                            <font>
-                              <Font size="11.0" />
+                              <Font size="24.0" />
                            </font>
                         </Label>
                      </children>
@@ -169,15 +169,15 @@
                   
                                     <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 12, 0, 0, 4);" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
-                        <FontIcon fx:id="iconCardFinanceiro" iconColor="#277ce0" iconLiteral="fas-dollar-sign" iconSize="32" />
+                        <FontIcon fx:id="iconCardFinanceiro" iconColor="#277ce0" iconLiteral="fas-dollar-sign" iconSize="60" />
                         <Label text="Financeiro" textFill="#277ce0">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="36.0" />
                            </font>
                         </Label>
                         <Label text="Controle financeiro geral" textFill="#888888">
                            <font>
-                              <Font size="11.0" />
+                              <Font size="24.0" />
                            </font>
                         </Label>
                      </children>
@@ -185,15 +185,15 @@
                   
                                     <VBox alignment="CENTER" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 12, 0, 0, 4);" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <children>
-                        <FontIcon fx:id="iconCardRelatorios" iconColor="#277ce0" iconLiteral="fas-chart-bar" iconSize="32" />
+                        <FontIcon fx:id="iconCardRelatorios" iconColor="#277ce0" iconLiteral="fas-chart-bar" iconSize="60" />
                         <Label text="Relatórios" textFill="#277ce0">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="36.0" />
                            </font>
                         </Label>
                         <Label text="Estatísticas e relatórios" textFill="#888888">
                            <font>
-                              <Font size="11.0" />
+                              <Font size="24.0" />
                            </font>
                         </Label>
                      </children>
