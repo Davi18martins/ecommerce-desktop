@@ -16,7 +16,7 @@ public class UsuarioDAO {
 
     //Cadastra usuário
     public void cadastrar(Usuario usuario) {
-        String sql = "INSERT into usuarios(nomeCompleto,nomeUsuario, email, senha, cpf) VALUES (?,?,?,?,?)";
+        String sql = "INSERT into usuarios(nomeCompleto,nomeUsuario, email, senha, cpf, role) VALUES (?,?,?,?,?,?)";
         try (Connection conn = Conexao.conectar()) {
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, usuario.getNomeCompleto());
@@ -24,6 +24,7 @@ public class UsuarioDAO {
             stmt.setString(3, usuario.getEmail());
             stmt.setString(4, usuario.getSenha());
             stmt.setString(5, usuario.getCpf());
+            stmt.setString(6, usuario.getRole());
             stmt.executeUpdate();
             System.out.println("Usuário " + usuario.getNomeCompleto() + " cadastrado com sucesso!");
         } catch (Exception e) {
@@ -47,7 +48,7 @@ public class UsuarioDAO {
 
     void atualizar(Usuario u) {
         
-        String sql = "UPDATE usuarios SET nomeCompleto=?,nomeUsuario=?, email=?, senha=?, cpf=? WHERE nomeUsuario=?";
+        String sql = "UPDATE usuarios SET nomeCompleto=?,nomeUsuario=?, email=?, senha=?, cpf=?, role=? WHERE nomeUsuario=?";
         try (Connection conn = Conexao.conectar()) {
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, u.getNomeCompleto());
@@ -55,7 +56,8 @@ public class UsuarioDAO {
             stmt.setString(3, u.getEmail());
             stmt.setString(4, u.getSenha());
             stmt.setString(5, u.getCpf());
-            stmt.setString(6,u.getNomeUsuario());
+            stmt.setString(6,u.getRole());
+            
             stmt.executeUpdate();
             System.out.println("Usuário " + u.getNomeCompleto() + " atualizado com sucesso!");
         } catch (Exception e) {

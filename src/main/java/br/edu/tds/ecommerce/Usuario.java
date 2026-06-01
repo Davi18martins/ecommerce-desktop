@@ -16,13 +16,15 @@ public class Usuario {
     private String email;
     private String senha;
     private String cpf;
+    private String role;
 
-    public Usuario(String nomeCompleto, String nomeUsuario, String email, String senha, String cpf) {
+    public Usuario(String nomeCompleto, String nomeUsuario, String email, String senha, String cpf, String role) {
         this.nomeCompleto = nomeCompleto;
         this.nomeUsuario = nomeUsuario;
         this.email = email;
         this.senha = senha;
         this.cpf = cpf;
+        this.role = role;
     }
 
     Usuario() {
@@ -75,6 +77,14 @@ public class Usuario {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
  
 }
