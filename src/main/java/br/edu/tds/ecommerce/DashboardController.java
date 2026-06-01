@@ -16,109 +16,59 @@ public class DashboardController {
     @FXML
     private void abrirUsuarios() throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaGerenciamentoUsuariosController.fxml"));
-        
-            Parent root =loader.load();
-        
-            TelaGerenciamentoUsuariosController controller =loader.getController();
-        
-       
-        
-            //Trocando de tela
-            Stage stage = (Stage) painelPrincipal.getScene().getWindow();
-            stage.setScene(new Scene(root));
-            
         System.out.println("Abrir Usuários");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaGerenciamentoUsuarios.fxml"));
+
+        Parent root = loader.load();
+
+        TelaGerenciamentoUsuariosController controller = loader.getController();
+
+        //Trocando de tela
+        Stage stage = (Stage) painelPrincipal.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        //stage.setMaximized(false);
+        //stage.show();
+        //stage.setMaxWidth(700);
+        //stage.setMaxHeight(500);
+
     }
 
     @FXML
     private void abrirProdutos() throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaGerenciamentoUsuariosController.fxml"));
-        
-            Parent root =loader.load();
-        
-            TelaGerenciamentoUsuariosController controller =loader.getController();
-        
-       
-        
-            //Trocando de tela
-            Stage stage = (Stage) painelPrincipal.getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.setMaximized(false);
-            
-        
         System.out.println("Abrir Produtos");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaGerenciamentoProdutos.fxml"));
+
+        Parent root = loader.load();
+
+        TelaGerenciamentoProdutosController controller = loader.getController();
+
+        //Trocando de tela
+        Stage stage = (Stage) painelPrincipal.getScene().getWindow();
+        stage.setScene(new Scene(root));
+
     }
 
     @FXML
-    private void abrirFornecedores() throws IOException {
+    private void abrirFornecedores() {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaGerenciamentoUsuariosController.fxml"));
-        
-            Parent root =loader.load();
-        
-            TelaGerenciamentoUsuariosController controller =loader.getController();
-        
-       
-        
-            //Trocando de tela
-            Stage stage = (Stage) painelPrincipal.getScene().getWindow();
-            stage.setScene(new Scene(root));
-        
         System.out.println("Abrir fornecedores");
     }
 
     @FXML
-    private void abrirVendas() throws IOException {
-        
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaGerenciamentoUsuariosController.fxml"));
-        
-            Parent root =loader.load();
-        
-            TelaGerenciamentoUsuariosController controller =loader.getController();
-        
-       
-        
-            //Trocando de tela
-            Stage stage = (Stage) painelPrincipal.getScene().getWindow();
-            stage.setScene(new Scene(root));
+    private void abrirVendas() {
 
         System.out.println("Abrir vendas");
     }
 
     @FXML
-    private void abrirFinanceiro() throws IOException {
-        
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaGerenciamentoUsuariosController.fxml"));
-        
-            Parent root =loader.load();
-        
-            TelaGerenciamentoUsuariosController controller =loader.getController();
-        
-       
-        
-            //Trocando de tela
-            Stage stage = (Stage) painelPrincipal.getScene().getWindow();
-            stage.setScene(new Scene(root));
+    private void abrirFinanceiro() {
 
         System.out.println("Abrir financeiro");
     }
 
     @FXML
-    private void abrirRelatorios() throws IOException {
-        
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaGerenciamentoUsuariosController.fxml"));
-        
-            Parent root =loader.load();
-        
-            TelaGerenciamentoUsuariosController controller =loader.getController();
-        
-       
-        
-            //Trocando de tela
-            Stage stage = (Stage) painelPrincipal.getScene().getWindow();
-            stage.setScene(new Scene(root));
+    private void abrirRelatorios() {
 
         System.out.println("Abrir relatórios");
     }
@@ -127,5 +77,7 @@ public class DashboardController {
     private void logout() throws IOException {
 
         System.out.println("logout");
+        Stage stage = (Stage) painelPrincipal.getScene().getWindow();
+        stage.close();
     }
 }
