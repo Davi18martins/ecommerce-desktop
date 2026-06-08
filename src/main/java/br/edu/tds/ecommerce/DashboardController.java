@@ -17,7 +17,7 @@ public class DashboardController {
     private void abrirUsuarios() throws IOException {
 
         System.out.println("Abrir Usuários");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaGerenciamentoUsuarios.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaGerenciamentoUsuariosController.fxml"));
 
         Parent root = loader.load();
 
@@ -37,7 +37,7 @@ public class DashboardController {
     private void abrirProdutos() throws IOException {
 
         System.out.println("Abrir Produtos");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/telaGerenciamentoProdutos.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/br/edu/tds/ecommerce/TelaGerenciamentoProdutos.fxml"));
 
         Parent root = loader.load();
 

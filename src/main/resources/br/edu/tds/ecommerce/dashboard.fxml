@@ -1,224 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<BorderPane fx:id="painelPrincipal" prefHeight="900.0" prefWidth="1600.0" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.ecommerce.DashboardController">
-
-    <!-- SIDEBAR -->
+<BorderPane fx:id="painelPrincipal" prefHeight="500.0" prefWidth="700.0" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.tds.ecommerce.DashboardController">
 
     <left>
-
-        <AnchorPane prefWidth="280.0" styleClass="sidebar" stylesheets="@dashboard.css">
-
+        <VBox alignment="CENTER" prefHeight="597.0" prefWidth="186.0" spacing="12.0" styleClass="sidebar" stylesheets="@dashboard.css">
+            <padding>
+                <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+            </padding>
             <children>
-
-                <!-- BOTÃO LOGOUT -->
-
-                <Button layoutX="40.0" layoutY="780.0" onAction="#logout" prefWidth="190" styleClass="logout-button" stylesheets="@dashboard.css" text="Logout">
-
-                    <graphic>
-
-                        <FontIcon iconColor="WHITE" iconLiteral="fas-sign-out-alt" iconSize="20" />
-
-                    </graphic>
-
-                </Button>
-
-                <!-- LOGO -->
-
-                <FontIcon iconColor="WHITE" iconLiteral="fas-store" iconSize="75" layoutX="95" layoutY="100" />
-
-                <Text fill="WHITE" layoutX="45" layoutY="170" text="Dashboard">
-
+                
+                <FontIcon iconColor="WHITE" iconLiteral="fas-store" iconSize="40" />
+                <Text fill="WHITE" text="Dashboard">
                     <font>
-                        <Font size="30" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
-
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
                 </Text>
 
-                <!-- MENU -->
-
-                <Button layoutX="20" layoutY="240" onAction="#abrirUsuarios" prefWidth="230" styleClass="menu-button" text="Usuários">
-
+                <Button maxWidth="1.7976931348623157E308" onAction="#abrirUsuarios" styleClass="menu-button" text="Usuários">
                     <graphic>
-                        <FontIcon iconColor="WHITE" iconLiteral="fas-users" iconSize="20" />
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-users" iconSize="14" />
                     </graphic>
-
                 </Button>
 
-                <Button layoutX="20" layoutY="300" onAction="#abrirProdutos" prefWidth="230" styleClass="menu-button" stylesheets="@dashboard.css" text="Produtos">
-
+                <Button maxWidth="1.7976931348623157E308" onAction="#abrirProdutos" styleClass="menu-button" text="Produtos">
                     <graphic>
-                        <FontIcon iconColor="WHITE" iconLiteral="fas-box-open" iconSize="20" />
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-box-open" iconSize="14" />
                     </graphic>
-
                 </Button>
 
-                <Button layoutX="20" layoutY="360" onAction="#abrirFornecedores" prefWidth="230" styleClass="menu-button" stylesheets="@dashboard.css" text="Fornecedores">
-
+                <Button maxWidth="1.7976931348623157E308" onAction="#abrirFornecedores" styleClass="menu-button" text="Fornecedores">
                     <graphic>
-                        <FontIcon iconColor="WHITE" iconLiteral="fas-truck" iconSize="20" />
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-truck" iconSize="14" />
                     </graphic>
-
                 </Button>
 
-                <Button layoutX="20" layoutY="420" onAction="#abrirVendas" prefWidth="230" styleClass="menu-button" stylesheets="@dashboard.css" text="Vendas">
-
+                <Button maxWidth="1.7976931348623157E308" onAction="#abrirVendas" styleClass="menu-button" text="Vendas">
                     <graphic>
-                        <FontIcon iconColor="WHITE" iconLiteral="fas-shopping-cart" iconSize="20" />
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-shopping-cart" iconSize="14" />
                     </graphic>
-
                 </Button>
 
-                <Button layoutX="20" layoutY="480" onAction="#abrirFinanceiro" prefWidth="230" styleClass="menu-button" stylesheets="@dashboard.css" text="Financeiro">
-
+                <Button maxWidth="1.7976931348623157E308" onAction="#abrirFinanceiro" styleClass="menu-button" text="Financeiro">
                     <graphic>
-                        <FontIcon iconColor="WHITE" iconLiteral="fas-dollar-sign" iconSize="20" />
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-dollar-sign" iconSize="14" />
                     </graphic>
-
                 </Button>
 
-                <Button layoutX="20" layoutY="540" onAction="#abrirRelatorios" prefWidth="230" styleClass="menu-button" stylesheets="@dashboard.css" text="Relatórios">
-
+                <Button maxWidth="1.7976931348623157E308" onAction="#abrirRelatorios" styleClass="menu-button" text="Relatórios">
                     <graphic>
-                        <FontIcon iconColor="WHITE" iconLiteral="fas-chart-line" iconSize="20" />
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-chart-line" iconSize="14" />
                     </graphic>
-
                 </Button>
 
+                <VBox prefHeight="200.0" VBox.vgrow="ALWAYS" />
+
+                <Button maxWidth="1.7976931348623157E308" onAction="#logout" styleClass="logout-button" text="Logout">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-sign-out-alt" iconSize="14" />
+                    </graphic>
+                </Button>
             </children>
-
-        </AnchorPane>
-
+        </VBox>
     </left>
 
-      <!-- ===================================================== -->
-    <!-- ÁREA CENTRAL -->
-    <!-- ===================================================== -->
-
     <center>
-
-        <AnchorPane styleClass="dashboard-background" stylesheets="@dashboard.css">
-
+        <GridPane alignment="CENTER" hgap="15.0" styleClass="dashboard-background" vgap="15.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+            </rowConstraints>
             <children>
 
-                <!-- ===================================================== -->
-                <!-- CARD USUÁRIOS -->
-                <!-- ===================================================== -->
-
-                <AnchorPane layoutX="40" layoutY="40" onMouseClicked="#abrirUsuarios" prefHeight="300" prefWidth="360" styleClass="card" stylesheets="@dashboard.css">
-
+                <VBox alignment="CENTER" onMouseClicked="#abrirUsuarios" spacing="5.0" styleClass="card" GridPane.columnIndex="0" GridPane.rowIndex="0">
                     <children>
-
-                        <FontIcon iconColor="#0598ff" iconLiteral="fas-users" iconSize="90" layoutX="135" layoutY="110" />
-
-                        <Text layoutX="95" layoutY="190" styleClass="card-title" text="Usuários" />
-
-                        <Text layoutX="50" layoutY="230" styleClass="card-subtitle" text="Gerencie usuários do sistema" />
-
+                        <FontIcon iconColor="#0598ff" iconLiteral="fas-users" iconSize="40" />
+                        <Text styleClass="card-title" text="Usuários" />
+                        <Text styleClass="card-subtitle" text="Gerencie usuários" />
                     </children>
+                </VBox>
 
-                </AnchorPane>
-
-                <!-- ===================================================== -->
-                <!-- CARD PRODUTOS -->
-                <!-- ===================================================== -->
-
-                <AnchorPane layoutX="430" layoutY="40" onMouseClicked="#abrirProdutos" prefHeight="300" prefWidth="360" styleClass="card" stylesheets="@dashboard.css">
-
+                <VBox alignment="CENTER" onMouseClicked="#abrirProdutos" spacing="5.0" styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="0">
                     <children>
-
-                        <FontIcon iconColor="#0598ff" iconLiteral="fas-box-open" iconSize="90" layoutX="135" layoutY="110" />
-
-                        <Text layoutX="95" layoutY="190" styleClass="card-title" text="Produtos" />
-
-                        <Text layoutX="55" layoutY="230" styleClass="card-subtitle" text="Controle de estoque e catálogo" />
-
+                        <FontIcon iconColor="#0598ff" iconLiteral="fas-box-open" iconSize="40" />
+                        <Text styleClass="card-title" text="Produtos" />
+                        <Text styleClass="card-subtitle" text="Estoque e catálogo" />
                     </children>
+                </VBox>
 
-                </AnchorPane>
-
-                <!-- ===================================================== -->
-                <!-- CARD FORNECEDORES -->
-                <!-- ===================================================== -->
-
-                <AnchorPane layoutX="820" layoutY="40" onMouseClicked="#abrirFornecedores" prefHeight="300" prefWidth="360" styleClass="card" stylesheets="@dashboard.css">
-
+                <VBox alignment="CENTER" onMouseClicked="#abrirFornecedores" spacing="5.0" styleClass="card" GridPane.columnIndex="2" GridPane.rowIndex="0">
                     <children>
-
-                        <FontIcon iconColor="#0598ff" iconLiteral="fas-truck" iconSize="90" layoutX="135" layoutY="110" />
-
-                        <Text layoutX="55" layoutY="190" styleClass="card-title" text="Fornecedores" />
-
-                        <Text layoutX="55" layoutY="230" styleClass="card-subtitle" text="Controle de fornecedores" />
-
+                        <FontIcon iconColor="#0598ff" iconLiteral="fas-truck" iconSize="40" />
+                        <Text styleClass="card-title" text="Fornecedores" />
+                        <Text styleClass="card-subtitle" text="Controle de parceiros" />
                     </children>
+                </VBox>
 
-                </AnchorPane>
-
-                <!-- ===================================================== -->
-                <!-- CARD VENDAS -->
-                <!-- ===================================================== -->
-
-                <AnchorPane layoutX="40" layoutY="390" onMouseClicked="#abrirVendas" prefHeight="300" prefWidth="360" styleClass="card" stylesheets="@dashboard.css">
-
+                <VBox alignment="CENTER" onMouseClicked="#abrirVendas" spacing="5.0" styleClass="card" GridPane.columnIndex="0" GridPane.rowIndex="1">
                     <children>
-
-                        <FontIcon iconColor="#0598ff" iconLiteral="fas-shopping-cart" iconSize="90" layoutX="125" layoutY="110" />
-
-                        <Text layoutX="115" layoutY="190" styleClass="card-title" text="Vendas" />
-
-                        <Text layoutX="60" layoutY="230" styleClass="card-subtitle" text="Gerenciamento de vendas" />
-
+                        <FontIcon iconColor="#0598ff" iconLiteral="fas-shopping-cart" iconSize="40" />
+                        <Text styleClass="card-title" text="Vendas" />
+                        <Text styleClass="card-subtitle" text="Gerenciar vendas" />
                     </children>
+                </VBox>
 
-                </AnchorPane>
-
-                <!-- ===================================================== -->
-                <!-- CARD FINANCEIRO -->
-                <!-- ===================================================== -->
-
-                <AnchorPane layoutX="418.0" layoutY="407.0" onMouseClicked="#abrirFinanceiro" prefHeight="300" prefWidth="360" styleClass="card" stylesheets="@dashboard.css">
-
+                <VBox alignment="CENTER" onMouseClicked="#abrirFinanceiro" spacing="5.0" styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <children>
-
-                        <FontIcon iconColor="#0598ff" iconLiteral="fas-dollar-sign" iconSize="90" layoutX="145" layoutY="110" />
-
-                        <Text layoutX="85" layoutY="190" styleClass="card-title" text="Financeiro" />
-
-                        <Text layoutX="55" layoutY="230" styleClass="card-subtitle" text="Controle financeiro geral" />
-
+                        <FontIcon iconColor="#0598ff" iconLiteral="fas-dollar-sign" iconSize="40" />
+                        <Text styleClass="card-title" text="Financeiro" />
+                        <Text styleClass="card-subtitle" text="Controle financeiro" />
                     </children>
+                </VBox>
 
-                </AnchorPane>
-
-                <!-- ===================================================== -->
-                <!-- CARD RELATÓRIOS -->
-                <!-- ===================================================== -->
-
-                <AnchorPane layoutX="820" layoutY="390" onMouseClicked="#abrirRelatorios" prefHeight="300" prefWidth="360" styleClass="card" stylesheets="@dashboard.css">
-
+                <VBox alignment="CENTER" onMouseClicked="#abrirRelatorios" spacing="5.0" styleClass="card" GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <children>
-
-                        <FontIcon iconColor="#0598ff" iconLiteral="fas-chart-line" iconSize="90" layoutX="135" layoutY="110" />
-
-                        <Text layoutX="70" layoutY="190" styleClass="card-title" text="Relatórios" />
-
-                        <Text layoutX="50" layoutY="230" styleClass="card-subtitle" text="Estatísticas e relatórios" />
-
+                        <FontIcon iconColor="#0598ff" iconLiteral="fas-chart-line" iconSize="40" />
+                        <Text styleClass="card-title" text="Relatórios" />
+                        <Text styleClass="card-subtitle" text="Estatísticas gerais" />
                     </children>
-
-                </AnchorPane>
+                </VBox>
 
             </children>
-
-        </AnchorPane>
-
+        </GridPane>
     </center>
-
 </BorderPane>
