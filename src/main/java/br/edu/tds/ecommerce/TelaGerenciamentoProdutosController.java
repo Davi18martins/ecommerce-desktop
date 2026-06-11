@@ -140,7 +140,7 @@ public class TelaGerenciamentoProdutosController implements Initializable {
     Produto pSelecionado = tabelaProdutos.getSelectionModel().getSelectedItem();
     
     if(pSelecionado == null){
-        mostrarAlerta("Selecione um usuário");
+        mostrarAlerta("Selecione um produto");
         return;
     }
     try{

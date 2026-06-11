@@ -4,11 +4,14 @@
  */
 package br.edu.tds.ecommerce;
 
+import com.cloudinary.Cloudinary;
+import com.cloudinary.utils.ObjectUtils;
 import java.io.File;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -96,11 +99,6 @@ public class TelaCadastroProdutosController implements Initializable {
 
         boolean status = validarCampos();
 
-        String caminhoImagem
-                = salvarImagem(
-                        arquivoSelecionado
-                );
-
         if (status) {
             //salvo os dados do produto no banco de dados
 
@@ -109,7 +107,10 @@ public class TelaCadastroProdutosController implements Initializable {
             p.setCategoria(cbCategoria.getValue());
             p.setPreco(Double.parseDouble(txtPreco.getText()));
             p.setQuantidade(Integer.parseInt(txtQuantidade.getText()));
+            String caminhoImagem = salvarImagem(arquivoSelecionado);
+
             p.setImagem(caminhoImagem);
+
             p.setDescricao(txtDescricao.getText());
             p.setAtivo(cAtivo.isSelected());
 
@@ -139,16 +140,13 @@ public class TelaCadastroProdutosController implements Initializable {
         txtPreco.setText(String.valueOf(produtoEdicao.getPreco()));
         txtQuantidade.setText(String.valueOf(produtoEdicao.getQuantidade()));
         txtImagem.setText(produtoEdicao.getImagem());
+        System.out.println("produtoEdicao.getImagem(): " + produtoEdicao.getImagem());
         Image image
                 = new Image(
-                        new File(
-                                produtoEdicao.getImagem()
-                        )
-                                .toURI()
-                                .toString()
+                        produtoEdicao.getImagem()
                 );
-
         imgProduto.setImage(image);
+
         txtDescricao.setText(produtoEdicao.getDescricao());
         cAtivo.setSelected(produtoEdicao.isAtivo());
     }
@@ -192,38 +190,18 @@ public class TelaCadastroProdutosController implements Initializable {
 
         try {
 
-            String pastaDestino
-                    = "imagens_produtos/";
+            Cloudinary cloudinary
+                    = CloudinaryConfig.getCloudinary();
 
-            File diretorio
-                    = new File(pastaDestino);
-
-            if (!diretorio.exists()) {
-
-                diretorio.mkdir();
-            }
-
-            String nomeArquivo
-                    = System.currentTimeMillis()
-                    + "_"
-                    + arquivo.getName();
-
-            Path origem
-                    = arquivo.toPath();
-
-            Path destino
-                    = Path.of(
-                            pastaDestino,
-                            nomeArquivo
+            Map resultado
+                    = cloudinary.uploader().upload(
+                            arquivo,
+                            ObjectUtils.emptyMap()
                     );
 
-            Files.copy(
-                    origem,
-                    destino,
-                    StandardCopyOption.REPLACE_EXISTING
-            );
-
-            return destino.toString();
+            return resultado
+                    .get("secure_url")
+                    .toString();
 
         } catch (Exception e) {
 
